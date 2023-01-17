@@ -63,7 +63,7 @@ st.markdown(hide_streamlit_footer, unsafe_allow_html=True)
 st.set_option('deprecation.showPyplotGlobalUse', False)
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
-st.title('Crypto Converter to Local Currency')
+st.title('Weather App dashboard')
 st.subheader("Navigate to side bar to see full project info as well as options to choose from, to get started!")
 
   
@@ -109,7 +109,7 @@ def add_logo():
         """
         <style>
             [data-testid="stSidebarNav"] {
-                background-image: url(https://github.com/chemicoPy/crypto-conv-dashboard/blob/main/img/page_icon.png);
+                background-image: url(https://github.com/chemicoPy/weather-app-dashboard/blob/main/img/page_icon.png);
                 background-repeat: no-repeat;
                 padding-top: 120px;
                 background-position: 20px 20px;
