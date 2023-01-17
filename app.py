@@ -109,7 +109,7 @@ def add_logo():
         """
         <style>
             [data-testid="stSidebarNav"] {
-                background-image: url(https://github.com/chemicoPy/weather-app-dashboard/blob/main/img/page_icon.png);
+                background-image: url(https://github.com/chemicoPy/weather-app-dashboard/blob/main/img/icon.png);
                 background-repeat: no-repeat;
                 padding-top: 120px;
                 background-position: 20px 20px;
@@ -291,7 +291,7 @@ st.sidebar.markdown(
     -----------
     # Other Apps
  
-    1. [Weather App](https://www.movavi.com/support/how-to/how-to-convert-music-to-wav.html)
+    1. [Crypto Converter Dashboard](https://chemicopy-crypto-conv-dashboard-app-10tiqj.streamlit.app/)
     2. [Immigration Dashboard](https://www.movavi.com/support/how-to/how-to-convert-music-to-wav.html)
     3. [Crime Dashboard](https://www.movavi.com/support/how-to/how-to-convert-music-to-wav.html)
     """)
