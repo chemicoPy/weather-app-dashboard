@@ -149,10 +149,12 @@ if st.sidebar.button("Show Viz!"):
 # Add a chart showing the forecast temperature
   st.line_chart(df)
 
-  st.write(df)
-  
   st.subheader("Suggestion/Insights")
   #st.write()
+  
+  
+  st.write(df)
+  
     
 st.sidebar.markdown(
 
