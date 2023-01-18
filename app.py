@@ -100,7 +100,7 @@ country_select = st.sidebar.selectbox(
             "Country",
             ("Country", countries_list),)
 
-if country_select !=="Country":
+if country_select !="Country":
     to_conv = st.sidebar.selectbox(
             "City",
             ("City", "GBP", 
