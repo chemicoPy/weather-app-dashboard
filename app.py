@@ -30,6 +30,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 from pprint import pprint
 import statsmodels.regression.linear_model as rg
+from geosky import geo_plug
   
 
 # Desiging & implementing changes to the standard streamlit UI/UX
@@ -92,12 +93,12 @@ st.sidebar.markdown(
   
 st.sidebar.markdown("## Select Country & City from below options") # add a title to the sidebar container
 
+countries = geo_plug.all_CountryNames()
+#print(list(countries))
+
 from_conv = st.sidebar.selectbox(
             "Country",
-            ("GBP", 
-"EUR", "NZD", "USD", "NPR","JPY","BGN","CZK","DKK","GBP","HUF","PLN","RON","SEK", 
-              "CHF","ISK","NOK","TRY","AUD","BRL","CAD","CNY","HKD","IDR","ILS",
-               "INR","KRW","MXN","MYR","PHP","SGD", "THB", "ZAR"),)
+            (list(countries),)
 
 to_conv = st.sidebar.selectbox(
             "City",
