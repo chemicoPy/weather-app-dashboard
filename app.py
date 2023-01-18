@@ -96,13 +96,14 @@ st.sidebar.markdown("## Select Country & City from below options") # add a title
 countries = geo_plug.all_CountryNames()
 countries_list = list(countries)
 
-from_conv = st.sidebar.selectbox(
+country_select = st.sidebar.selectbox(
             "Country",
-            (countries_list),)
+            ("Country", countries_list),)
 
-to_conv = st.sidebar.selectbox(
+if country_select !=="Country":
+    to_conv = st.sidebar.selectbox(
             "City",
-            ("GBP", 
+            ("City", "GBP", 
              "EUR", "NZD", "USD", "NPR", "JPY","BGN","CZK","DKK","GBP","HUF","PLN","RON","SEK", 
                                                   "CHF","ISK","NOK","TRY","AUD","BRL","CAD","CNY","HKD","IDR","ILS", "INR","KRW","MXN","MYR","PHP","SGD", "THB", "ZAR"),)
     
