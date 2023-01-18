@@ -79,7 +79,7 @@ my_logo = add_logo(logo_path="img/icon.png", width=60, height=70)
 st.sidebar.image(my_logo)
 
 API_KEY = "06a0159059dc1c945b62591f03bbf59d"
-BASE_URL = "http://api.openweathermap.org/data/3.0/forecast"
+BASE_URL = "http://api.openweathermap.org/data/2.5/forecast"
   
   
     # ------ layout setting---------------------------
@@ -122,8 +122,8 @@ Tframe = st.sidebar.selectbox(
 
 if st.sidebar.button("Show Viz!"):
     # Set parameters for the API request
-  city = "Grande cache"
-  country = "CA"
+  city = "Ikeja"
+  country = "Nigeria"
   units = "metric"
 
 # Make the API requestr
@@ -150,6 +150,9 @@ if st.sidebar.button("Show Viz!"):
   st.line_chart(df)
 
   st.write(df)
+  
+  st.subheader("Suggestion/Insights")
+  #st.write()
     
 st.sidebar.markdown(
 
