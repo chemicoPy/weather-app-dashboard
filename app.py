@@ -97,7 +97,7 @@ countries = geo_plug.all_CountryNames()
 countries_list = list(countries)
 
 country_select = st.sidebar.selectbox(
-            "Country", "Country",
+            "Country",
             (countries_list),)
 
 if country_select !="Country":
