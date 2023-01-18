@@ -31,6 +31,7 @@ import plotly.express as px
 from pprint import pprint
 import statsmodels.regression.linear_model as rg
 from geosky import geo_plug
+from countryinfo import CountryInfo
   
 
 # Desiging & implementing changes to the standard streamlit UI/UX
@@ -102,11 +103,12 @@ country_select = st.sidebar.selectbox(
             (countries_list),)
 
 if country_select !="Country":
+    states = CountryInfo(country_select)
+    states_list = country.provinces()
+    states_list.insert(0, "State")
     state_select = st.sidebar.selectbox(
             "City",
-            ("City", "GBP", 
-             "EUR", "NZD", "USD", "NPR", "JPY","BGN","CZK","DKK","GBP","HUF","PLN","RON","SEK", 
-                                                  "CHF","ISK","NOK","TRY","AUD","BRL","CAD","CNY","HKD","IDR","ILS", "INR","KRW","MXN","MYR","PHP","SGD", "THB", "ZAR"),)
+            (states_list),)
     
 
 #st.sidebar.write("Converted price = ", simpleConverter.convert(price, str(from_conv), str(to_conv)))
