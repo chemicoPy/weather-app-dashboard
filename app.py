@@ -104,10 +104,10 @@ country_select = st.sidebar.selectbox(
 
 if country_select !="Country":
     states = CountryInfo(country_select)
-    states_list = country.provinces()
+    states_list = states.provinces()
     states_list.insert(0, "State")
     state_select = st.sidebar.selectbox(
-            "City",
+            "State",
             (states_list),)
     
 
