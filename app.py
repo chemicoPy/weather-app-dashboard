@@ -109,7 +109,7 @@ def add_logo():
         """
         <style>
             [data-testid="stSidebarNav"] {
-                background-image: url(https://github.com/chemicoPy/weather-app-dashboard/blob/main/img/icon.png);
+                background-image: url(https://www.urbanwhales.com/assets/img/brand/urbanwhales.svg);
                 background-repeat: no-repeat;
                 padding-top: 120px;
                 background-position: 20px 20px;
