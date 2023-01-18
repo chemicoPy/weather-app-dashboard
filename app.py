@@ -94,14 +94,14 @@ st.sidebar.markdown(
 st.sidebar.markdown("## Select Country & City from below options") # add a title to the sidebar container
 
 countries = geo_plug.all_CountryNames()
-countries_list = "Country" + list(countries)
+countries_list = list(countries)
 
 country_select = st.sidebar.selectbox(
-            "Country",
+            "Country", "Country"
             (countries_list),)
 
 if country_select !="Country":
-    to_conv = st.sidebar.selectbox(
+    state_select = st.sidebar.selectbox(
             "City",
             ("City", "GBP", 
              "EUR", "NZD", "USD", "NPR", "JPY","BGN","CZK","DKK","GBP","HUF","PLN","RON","SEK", 
