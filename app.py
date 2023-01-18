@@ -110,6 +110,18 @@ if country_select !="Country":
             "State",
             (states_list),)
     
+    if state_select !="State":
+      city = geo_plug.all_State_CityNames("Benue")
+      cities = []
+      for key,values in eval(city)[0].items():
+        cities.append(values)
+        #cities[0]
+      cities_list = cities[0]
+      cities_list.insert(0, "City")
+      city_select = st.sidebar.selectbox(
+            "City",
+            (cities_list),)
+    
 
 #st.sidebar.write("Converted price = ", simpleConverter.convert(price, str(from_conv), str(to_conv)))
 
