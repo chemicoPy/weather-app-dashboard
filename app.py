@@ -111,7 +111,7 @@ if country_select !="Country":
             (states_list),)
     
     if state_select !="State":
-      city = geo_plug.all_State_CityNames("Benue")
+      city = geo_plug.all_State_CityNames(state_select)
       cities = []
       for key,values in eval(city)[0].items():
         cities.append(values)
