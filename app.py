@@ -79,7 +79,7 @@ my_logo = add_logo(logo_path="img/icon.png", width=60, height=70)
 st.sidebar.image(my_logo)
 
 API_KEY = "06a0159059dc1c945b62591f03bbf59d"
-BASE_URL = "http://api.openweathermap.org/data/2.5/forecast"
+BASE_URL = "http://api.openweathermap.org/data/3.0/forecast"
   
   
     # ------ layout setting---------------------------
