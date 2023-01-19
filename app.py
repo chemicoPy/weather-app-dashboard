@@ -181,8 +181,8 @@ if st.sidebar.button("Go!"):
   st.line_chart(df)
   
   #temperature
-  temp = data_2["main"]
-  st.write(temp["temp"],chr(176) + "C")
+  temp = data_2["list"][0]["main"]["temp"]
+  st.write(temp,chr(176) + "C")
   #pressure
   pressure = res["main"]
   st.write(pressure["pressure"]/100, "bar")
