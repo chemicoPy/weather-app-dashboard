@@ -137,14 +137,27 @@ if st.sidebar.button("Show Viz!"):
   url = f"http://api.openweathermap.org/data/2.5/weather?q={city_select}&appid={API_KEY}"
   response = requests.get(url)
   res = response.json()
- 
+  BASE_URL = "http://api.openweathermap.org/data/2.5/forecast"
+  country = "CA"
+  units = "metric"
+
+# Make the API requestr
+  response_2 = requests.get(BASE_URL, params={
+    "q": f"{city},{country}",
+    "units": units,
+    "appid": API_KEY
+})
+
 # Parse the API response
   data = response.json()
+ 
+# Parse the API response
+  data_2 = response_2.json()
 
 # Extract the forecast data for each day
   days = []
   temps = []
-  for day in data["list"]:
+  for day in data_2["list"]:
     days.append(day["dt_txt"])
     temps.append(day["main"]["temp"])
 
