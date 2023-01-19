@@ -134,7 +134,7 @@ st.write("\n")  # add spacing
 
 
 if st.sidebar.button("Show Viz!"):
-  url = f"http://api.openweathermap.org/data/2.5/weather?q={city_select}&appid={API_Key}"
+  url = f"http://api.openweathermap.org/data/2.5/weather?q={city_select}&appid={API_KEY}"
   response = requests.get(url)
   res = response.json()
  
