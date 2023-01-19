@@ -138,12 +138,11 @@ if st.sidebar.button("Show Viz!"):
   response = requests.get(url)
   res = response.json()
   BASE_URL = "http://api.openweathermap.org/data/2.5/forecast"
-  country = "CA"
   units = "metric"
 
 # Make the API requestr
   response_2 = requests.get(BASE_URL, params={
-    "q": f"{city},{country}",
+    "q": f"{city_select},{country_select}",
     "units": units,
     "appid": API_KEY
 })
