@@ -133,23 +133,11 @@ st.write("\n")  # add spacing
 
 
 
-
-
-
-
 if st.sidebar.button("Show Viz!"):
-    # Set parameters for the API request
-  city = "Ikeja"
-  country = "Nigeria"
-  units = "metric"
-
-# Make the API requestr
-  response = requests.get(BASE_URL, params={
-    "q": f"{city},{country}",
-    "units": units,
-    "appid": API_KEY
-})
-
+  url = f"http://api.openweathermap.org/data/2.5/weather?q={city_select}&appid={API_Key}"
+  response = requests.get(url)
+  res = response.json()
+ 
 # Parse the API response
   data = response.json()
 
@@ -165,6 +153,16 @@ if st.sidebar.button("Show Viz!"):
 
 # Add a chart showing the forecast temperature
   st.line_chart(df)
+  
+  #temperature
+  temp = res["main"]
+  st.write(temp["temp"],chr(176) + "C")
+  #pressure
+  pressure = res["main"]
+  st.write(pressure["pressure"]/100, "bar")
+  #Description
+  desc = res["weather"][0]["description"].capitalize()
+  st.write(desc)
 
   st.subheader("Suggestion/Insights")
   #st.write()
