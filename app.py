@@ -156,12 +156,26 @@ if st.sidebar.button("Show Viz!"):
 # Extract the forecast data for each day
   days = []
   temps = []
+  pressure_list = []
+  humidity_list = []
+  description_list = []
+  temp_min_list = []
+  temp_max_list = []
+  temp_kf_list = []
+  
   for day in data_2["list"]:
     days.append(day["dt_txt"])
     temps.append(day["main"]["temp"])
-
+    pressure_list.append(day["main"]["pressure"])
+    humidity_list.append(day["main"]["humidity"])
+    temp_min_list.append(day["main"]["temp_min"])
+    temp_max_list.append(day["main"]["temp_max"])
+    temp_kf_list.append(day["main"]["temp_kf"])
+    description_list.append(day["weather"][0]["description"].capitalize())
+    
 # Create a pandas DataFrame with the forecast data
-  df = pd.DataFrame({"Day": days, "Temperature (C)": temps})
+  df = pd.DataFrame({"Day": days, "Temperature (C)": temps, "Pressure": pressure_list, "Humidity": humidity_list,"Insight": description_list, 
+                     "Temp (min)": temp_min_list, "Temp (max)": temp_max_list, "Temp (kf)": temp_kf_list})
 
 # Add a chart showing the forecast temperature
   st.line_chart(df)
