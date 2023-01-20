@@ -28,6 +28,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 from pprint import pprint
 import statsmodels.regression.linear_model as rg
+from PIL import Image
 from geosky import geo_plug
 from countryinfo import CountryInfo
   
@@ -66,8 +67,6 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 st.title('Weather App dashboard')
 st.subheader("Navigate to side bar to see full project info as well as options to choose from, to get started!")
 
-
-from PIL import Image
 
 def add_logo(logo_path, width, height):
     """Read and return a resized logo"""
@@ -123,7 +122,6 @@ if country_select !="Country":
 
 #st.sidebar.write("Converted price = ", simpleConverter.convert(price, str(from_conv), str(to_conv)))
 
-    # ---------------forex pair selection------------------
   
 st.write("\n")  # add spacing   
 
