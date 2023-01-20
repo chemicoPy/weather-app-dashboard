@@ -12,12 +12,10 @@ import streamlit.components.v1 as components
 from io import BytesIO
 from time import sleep
 import math
-
 from numpy import *
 import json
 from pandas import DataFrame, Series
 from numpy.random import randn
-
 import io
 from pandas.io.json import json_normalize
 import matplotlib.pyplot as plt
@@ -125,12 +123,9 @@ if country_select !="Country":
 
 #st.sidebar.write("Converted price = ", simpleConverter.convert(price, str(from_conv), str(to_conv)))
 
-
     # ---------------forex pair selection------------------
   
 st.write("\n")  # add spacing   
-
-
 
 
 if st.sidebar.button("Go!"):
