@@ -119,12 +119,9 @@ if country_select !="Country":
             "City",
             (cities_list),)
     
-
 #st.sidebar.write("Converted price = ", simpleConverter.convert(price, str(from_conv), str(to_conv)))
-
   
 st.write("\n")  # add spacing   
-
 
 if st.sidebar.button("Go!"):
   url = f"http://api.openweathermap.org/data/2.5/weather?q={city_select}&appid={API_KEY}"
