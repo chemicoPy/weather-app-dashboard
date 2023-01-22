@@ -14,8 +14,7 @@ pandas==1.4.3; python_version >= '3.8'
 
 
 streamlit==0.82.0
-plotly==5.5.0
-requests==2.25.1
+
 spacy-streamlit==1.0.0
 spacy>=2.2.0
 
@@ -24,7 +23,6 @@ pandas_ta
 schedule
 statsmodels
 
-DateTime==4.3
 streamlit-extras
 
 
