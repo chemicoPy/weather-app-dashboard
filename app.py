@@ -71,14 +71,12 @@ st.title('Weather App Dashboard')
 st.subheader("Navigate to side bar to see full project info as well as options to choose from, to get started!")
 
 def add_bg_from_url():
-    background_url="img/bg_img.jpg"
-    bg_url = Image.open(background_url)
-  
+
     st.markdown(
          f"""
          <style>
          .stApp {{
-             background-image: background_url;
+             background-image: url(https://wallpaperaccess.com/full/1442216.jpg);
              background-attachment: fixed;
              background-size: cover
          }}
