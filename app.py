@@ -35,6 +35,17 @@ from countryinfo import CountryInfo
 
 # Desiging & implementing changes to the standard streamlit UI/UX
 st.set_page_config(page_icon="img/page_icon.png")    #Logo
+st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background: url("https://github.com/chemicoPy/weather-app-dashboard/blob/main/img/bg_img.jpg")
+    }
+  
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 st.markdown('''<style>.css-1egvi7u {margin-top: -4rem;}</style>''',
     unsafe_allow_html=True)
 # Design change hyperlink href link color
@@ -52,17 +63,7 @@ st.markdown('''<style>.stSpinner > div > div {border-top-color: #9d03fc;}</style
 st.markdown('''<style>.css-15tx938{min-height: 0.0rem;}</style>''',
     unsafe_allow_html=True)
 
-st.markdown(
-    """
-    <style>
-    .reportview-container {
-        background: url("https://www.pexels.com/photo/island-during-golden-hour-and-upcoming-storm-1118873/")
-    }
-  
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+
 
 # Design hide top header line
 hide_decoration_bar_style = '''<style>header {visibility: hidden;}</style>'''
