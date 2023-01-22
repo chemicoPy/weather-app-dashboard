@@ -70,13 +70,15 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 st.title('Weather App Dashboard')
 st.subheader("Navigate to side bar to see full project info as well as options to choose from, to get started!")
 
-def add_bg_from_url(background_url):
-    back_g = Image.open(background_url)
+def add_bg_from_url():
+    background_url="img/bg_img.jpg"
+    bg_url = Image.open(background_url)
+  
     st.markdown(
          f"""
          <style>
          .stApp {{
-             background-image: background_url;
+             background-image: bg_url;
              background-attachment: fixed;
              background-size: cover
          }}
@@ -84,10 +86,8 @@ def add_bg_from_url(background_url):
          """,
          unsafe_allow_html=True
      )
-    return back_g
 
-bg_img = add_bg_from_url(background_url="img/bg_img.jpg") 
-st.image(bg_img)
+add_bg_from_url()
 
 def add_logo(logo_path, width, height):
     """Read and return a resized logo"""
