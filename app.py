@@ -35,17 +35,17 @@ from countryinfo import CountryInfo
 
 # Desiging & implementing changes to the standard streamlit UI/UX
 st.set_page_config(page_icon="img/page_icon.png")    #Logo
+
 st.markdown(
-    """
-    <style>
-    .reportview-container {
-        background: url("https://github.com/chemicoPy/weather-app-dashboard/blob/main/img/bg_img.jpg")
-    }
-  
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+   f”””
+   <style>
+   p {
+   background-image: url("https://github.com/chemicoPy/weather-app-dashboard/blob/main/img/bg_img.jpg");
+   }
+   </style>
+   ”””,
+   unsafe_allow_html=True)
+
 st.markdown('''<style>.css-1egvi7u {margin-top: -4rem;}</style>''',
     unsafe_allow_html=True)
 # Design change hyperlink href link color
