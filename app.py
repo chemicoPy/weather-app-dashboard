@@ -56,7 +56,7 @@ st.markdown(
     """
     <style>
     .reportview-container {
-        background: url("https://wallpaperaccess.com/full/1442216.jpg")
+        background: url("https://github.com/chemicoPy/weather-app-dashboard/blob/main/img/bg_img.jpg")
     }
   
     </style>
