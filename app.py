@@ -161,5 +161,5 @@ st.sidebar.markdown(
     """)
 
   
-if(st.button("Go!")):
+if(st.sidebar.button("Go!")):
     st.write("Done!")
