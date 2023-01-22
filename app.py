@@ -153,7 +153,10 @@ dates=[]
 sunrise=[]
 sunset=[]
 cel=273.15
-        
+
+url=f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api}"
+response=requests.get(url)
+x=response.json()        
   
 if(st.sidebar.button("Go!")):
     
