@@ -191,7 +191,7 @@ if country_select !="Country":
         
             #st.write("Done!")
           
-         def bargraph():
+        def bargraph():
              fig=go.Figure(data=
                 [
                 go.Bar(name="Maximum",x=dates,y=maxtemp,marker_color='crimson'),
