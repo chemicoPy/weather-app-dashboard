@@ -133,6 +133,10 @@ if speed=="Kilometre/hour":
     wind_unit=" km/h"
 else:
     wind_unit=" m/s"
+    
+url=f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api}"
+response=requests.get(url)
+x=response.json()  
 
 lon=x["coord"]["lon"]
 lat=x["coord"]["lat"]
@@ -152,11 +156,7 @@ rain=[]
 dates=[]
 sunrise=[]
 sunset=[]
-cel=273.15
-
-url=f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api}"
-response=requests.get(url)
-x=response.json()        
+cel=273.15      
   
 if(st.sidebar.button("Go!")):
     
