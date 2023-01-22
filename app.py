@@ -75,7 +75,7 @@ def add_bg_from_url():
          f"""
          <style>
          .stApp {{
-             background-image: url("https://wallpaperaccess.com/full/1442216.jpg");
+             background-image: url("https://github.com/chemicoPy/weather-app-dashboard/blob/main/img/bg_img.jpg");
              background-attachment: fixed;
              background-size: cover
          }}
