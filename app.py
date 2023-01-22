@@ -182,8 +182,8 @@ if country_select !="Country":
 
             desc.append(item["weather"][0]["description"].title())
 
-            d1=datetime.date.fromtimestamp(item["dt"])
-            dates.append(d1.strftime('%d %b'))
+            #d1=datetime.date.fromtimestamp(item["dt"])
+            #dates.append(d1.strftime('%d %b'))
             
             sunrise.append( datetime.datetime.utcfromtimestamp(item["sunrise"]).strftime('%H:%M'))
             sunset.append( datetime.datetime.utcfromtimestamp(item["sunset"]).strftime('%H:%M'))
