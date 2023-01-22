@@ -11,9 +11,7 @@ matplotlib==3.5.2
 numpy==1.19.4
 pandas==1.4.3; python_version >= '3.8'
 
-
-
-streamlit==0.82.0
+streamlit==1.0.0
 
 spacy-streamlit==1.0.0
 spacy>=2.2.0
