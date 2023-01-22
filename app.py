@@ -202,6 +202,21 @@ if country_select !="Country":
                 rain.append(str(int(item["pop"]*100))+'%')
 
                 desc.append(item["weather"][0]["description"].title())
+                
+                
+              pres.append(item["pressure"])
+              humd.append(str(item["humidity"])+' %')
+            
+              cloud.append(str(item["clouds"])+' %')
+              rain.append(str(int(item["pop"]*100))+'%')
+
+              desc.append(item["weather"][0]["description"].title())
+
+              d1=datetime.date.fromtimestamp(item["dt"])
+              dates.append(d1.strftime('%d %b'))
+            
+              sunrise.append( datetime.datetime.utcfromtimestamp(item["sunrise"]).strftime('%H:%M'))
+              sunset.append( datetime.datetime.utcfromtimestamp(item["sunset"]).strftime('%H:%M'))
 
             #d1=datetime.date.fromtimestamp(item["dt"])
             #dates.append(d1.strftime('%d %b'))
