@@ -154,31 +154,32 @@ if country_select !="Country":
       else:
         wind_unit=" m/s"
     
-      url=f"https://api.openweathermap.org/data/2.5/weather?q={city_select}&appid={api}"
-      response=requests.get(url)
-      x=response.json()  
-
-      lon=x["coord"]["lon"]
-      lat=x["coord"]["lat"]
-      ex="current,minutely,hourly"
-      url2=f'https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={ex}&appid={api}'
-      res=requests.get(url2)
-      y=res.json()
-
-      maxtemp=[]
-      mintemp=[]
-      pres=[]
-      humd=[]
-      wspeed=[]
-      desc=[]
-      cloud=[]
-      rain=[]
-      dates=[]
-      sunrise=[]
-      sunset=[]
-      cel=273.15      
+           
   
       if(st.sidebar.button("Go!")):
+          url=f"https://api.openweathermap.org/data/2.5/weather?q={city_select}&appid={api}"
+          response=requests.get(url)
+          x=response.json()  
+
+          lon=x["coord"]["lon"]
+          lat=x["coord"]["lat"]
+          ex="current,minutely,hourly"
+          url2=f'https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={ex}&appid={api}'
+          res=requests.get(url2)
+          y=res.json()
+
+          maxtemp=[]
+          mintemp=[]
+          pres=[]
+          humd=[]
+          wspeed=[]
+          desc=[]
+          cloud=[]
+          rain=[]
+          dates=[]
+          sunrise=[]
+          sunset=[]
+          cel=273.15 
     
         for item in y["daily"]:
             
