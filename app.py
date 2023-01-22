@@ -70,12 +70,13 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 st.title('Weather App dashboard')
 st.subheader("Navigate to side bar to see full project info as well as options to choose from, to get started!")
 
-def add_bg_from_url():
+def add_bg_from_url(background_url):
+    back_g = Image.open(background_url)
     st.markdown(
          f"""
          <style>
          .stApp {{
-             background-image: url("https://github.com/chemicoPy/weather-app-dashboard/blob/main/img/bg_img.jpg");
+             background-image: background_url;
              background-attachment: fixed;
              background-size: cover
          }}
@@ -83,8 +84,8 @@ def add_bg_from_url():
          """,
          unsafe_allow_html=True
      )
-
-add_bg_from_url() 
+bg_url = "img/bg_img.jpg"
+add_bg_from_url(bg_url) 
 
 def add_logo(logo_path, width, height):
     """Read and return a resized logo"""
