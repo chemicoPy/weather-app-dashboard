@@ -159,16 +159,16 @@ if(st.sidebar.button("Go!")):
     
     for item in y["daily"]:
             
-    if unit=="Celsius":
+      if unit=="Celsius":
         maxtemp.append(round(item["temp"]["max"]-cel,2))
         mintemp.append(round(item["temp"]["min"]-cel,2))
-    else:
+      else:
         maxtemp.append(round((((item["temp"]["max"]-cel)*1.8)+32),2))
         mintemp.append(round((((item["temp"]["min"]-cel)*1.8)+32),2))
 
-    if wind_unit=="m/s":
+      if wind_unit=="m/s":
         wspeed.append(str(round(item["wind_speed"],1))+wind_unit)
-    else:
+      else:
         wspeed.append(str(round(item["wind_speed"]*3.6,1))+wind_unit)
 
         pres.append(item["pressure"])
