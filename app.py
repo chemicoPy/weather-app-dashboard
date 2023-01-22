@@ -77,7 +77,7 @@ def add_logo(logo_path, width, height):
 my_logo = add_logo(logo_path="img/icon.png", width=60, height=70)
 st.sidebar.image(my_logo)
 
-API_KEY = "06a0159059dc1c945b62591f03bbf59d"
+api="9b833c0ea6426b70902aa7a4b1da285c"
 BASE_URL = "http://api.openweathermap.org/data/2.5/forecast"
   
   
@@ -133,11 +133,59 @@ if speed=="Kilometre/hour":
     wind_unit=" km/h"
 else:
     wind_unit=" m/s"
-    
-  
 
+lon=x["coord"]["lon"]
+lat=x["coord"]["lat"]
+ex="current,minutely,hourly"
+url2=f'https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={ex}&appid={api}'
+res=requests.get(url2)
+y=res.json()
+
+maxtemp=[]
+mintemp=[]
+pres=[]
+humd=[]
+wspeed=[]
+desc=[]
+cloud=[]
+rain=[]
+dates=[]
+sunrise=[]
+sunset=[]
+cel=273.15
+        
+  
 if(st.sidebar.button("Go!")):
-    st.write("Done!")
+    
+    for item in y["daily"]:
+            
+    if unit=="Celsius":
+        maxtemp.append(round(item["temp"]["max"]-cel,2))
+        mintemp.append(round(item["temp"]["min"]-cel,2))
+    else:
+        maxtemp.append(round((((item["temp"]["max"]-cel)*1.8)+32),2))
+        mintemp.append(round((((item["temp"]["min"]-cel)*1.8)+32),2))
+
+    if wind_unit=="m/s":
+        wspeed.append(str(round(item["wind_speed"],1))+wind_unit)
+    else:
+        wspeed.append(str(round(item["wind_speed"]*3.6,1))+wind_unit)
+
+        pres.append(item["pressure"])
+        humd.append(str(item["humidity"])+' %')
+            
+        cloud.append(str(item["clouds"])+' %')
+        rain.append(str(int(item["pop"]*100))+'%')
+
+        desc.append(item["weather"][0]["description"].title())
+
+        d1=datetime.date.fromtimestamp(item["dt"])
+        dates.append(d1.strftime('%d %b'))
+            
+        sunrise.append( datetime.datetime.utcfromtimestamp(item["sunrise"]).strftime('%H:%M'))
+        sunset.append( datetime.datetime.utcfromtimestamp(item["sunset"]).strftime('%H:%M'))
+        
+        st.write("Done!")
     
     
     
