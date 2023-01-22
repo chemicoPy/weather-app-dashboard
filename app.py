@@ -208,7 +208,7 @@ if country_select !="Country":
             #sunrise.append( datetime.datetime.utcfromtimestamp(item["sunrise"]).strftime('%H:%M'))
             #sunset.append( datetime.datetime.utcfromtimestamp(item["sunset"]).strftime('%H:%M'))
         
-            #st.write("Done!")
+            
           
         def bargraph():
             fig=go.Figure(data=
@@ -276,6 +276,8 @@ if country_select !="Country":
         
             table2.update_layout(margin=dict(l=10,r=10,b=10,t=10),height=360)
             st.write(table2)
+            
+        st.write("Done!")
          
     
     
