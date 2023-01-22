@@ -120,6 +120,18 @@ if country_select !="Country":
             (cities_list),)
     
 #st.sidebar.write("Converted price = ", simpleConverter.convert(price, str(from_conv), str(to_conv)))
+
+unit=st.sidebar.radio("Select Temperature Unit ",["Celsius","Fahrenheit"])
+
+if unit=="Celsius":
+    temp_unit=" °C"
+else:
+    temp_unit=" °F"
+    
+if speed=="Kilometre/hour":
+    wind_unit=" km/h"
+else:
+    wind_unit=" m/s"
   
 st.write("\n")  # add spacing   
 
