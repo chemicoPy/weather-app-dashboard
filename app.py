@@ -122,6 +122,7 @@ if country_select !="Country":
 #st.sidebar.write("Converted price = ", simpleConverter.convert(price, str(from_conv), str(to_conv)))
 
 unit=st.sidebar.radio("Select Temperature Unit ",["Celsius","Fahrenheit"])
+speed=st.sidebar.radio("Select Wind Speed Unit ",["Metre/sec","Kilometre/hour"])
 
 if unit=="Celsius":
     temp_unit=" °C"
@@ -132,6 +133,7 @@ if speed=="Kilometre/hour":
     wind_unit=" km/h"
 else:
     wind_unit=" m/s"
+    
   
 st.write("\n")  # add spacing   
 
