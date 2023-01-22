@@ -192,49 +192,49 @@ if country_select !="Country":
             #st.write("Done!")
           
         def bargraph():
-             fig=go.Figure(data=
+            fig=go.Figure(data=
                 [
                 go.Bar(name="Maximum",x=dates,y=maxtemp,marker_color='crimson'),
                 go.Bar(name="Minimum",x=dates,y=mintemp,marker_color='navy')
                 ])
-             fig.update_layout(xaxis_title="Dates",yaxis_title="Temperature",barmode='group',margin=dict(l=70, r=10, t=80, b=80),font=dict(color="white"))
-             st.plotly_chart(fig)
+            fig.update_layout(xaxis_title="Dates",yaxis_title="Temperature",barmode='group',margin=dict(l=70, r=10, t=80, b=80),font=dict(color="white"))
+            st.plotly_chart(fig)
         
-         def linegraph():
-             fig = go.Figure()
-             fig.add_trace(go.Scatter(x=dates, y=mintemp, name='Minimum '))
-             fig.add_trace(go.Scatter(x=dates, y=maxtemp, name='Maximimum ',marker_color='crimson'))
-             fig.update_layout(xaxis_title="Dates",yaxis_title="Temperature",font=dict(color="white"))
-             st.plotly_chart(fig)
+        def linegraph():
+            fig = go.Figure()
+            fig.add_trace(go.Scatter(x=dates, y=mintemp, name='Minimum '))
+            fig.add_trace(go.Scatter(x=dates, y=maxtemp, name='Maximimum ',marker_color='crimson'))
+            fig.update_layout(xaxis_title="Dates",yaxis_title="Temperature",font=dict(color="white"))
+            st.plotly_chart(fig)
             
-             icon=x["weather"][0]["icon"]
-             current_weather=x["weather"][0]["description"].title()
+            icon=x["weather"][0]["icon"]
+            current_weather=x["weather"][0]["description"].title()
         
-             if unit=="Celsius":
-                 temp=str(round(x["main"]["temp"]-cel,2))
-             else:
-                 temp=str(round((((x["main"]["temp"]-cel)*1.8)+32),2))
+            if unit=="Celsius":
+                temp=str(round(x["main"]["temp"]-cel,2))
+            else:
+                temp=str(round((((x["main"]["temp"]-cel)*1.8)+32),2))
         
-             col1, col2 = st.columns(2)
-             with col1:
-                 st.write("## Current Temperature ")
-             with col2:
-                 st.image(f"http://openweathermap.org/img/wn/{icon}@2x.png",width=70)
+            col1, col2 = st.columns(2)
+            with col1:
+                st.write("## Current Temperature ")
+            with col2:
+                st.image(f"http://openweathermap.org/img/wn/{icon}@2x.png",width=70)
 
         
-             col1, col2= st.columns(2)
-             col1.metric("TEMPERATURE",temp+temp_unit)
-             col2.metric("WEATHER",current_weather)
-             st.subheader(" ")
+            col1, col2= st.columns(2)
+            col1.metric("TEMPERATURE",temp+temp_unit)
+            col2.metric("WEATHER",current_weather)
+            st.subheader(" ")
         
-             if graph=="Bar Graph":
-                 bargraph()
+            if graph=="Bar Graph":
+                bargraph()
             
-             elif graph=="Line Graph":
-                 linegraph()
+            elif graph=="Line Graph":
+                linegraph()
 
          
-             table1=go.Figure(data=[go.Table(header=dict(
+            table1=go.Figure(data=[go.Table(header=dict(
                   values = [
                   '<b>DATES</b>',
                   '<b>MAX TEMP<br>(in'+temp_unit+')</b>',
@@ -247,16 +247,16 @@ if country_select !="Country":
         line_color='black',fill_color=['paleturquoise',['palegreen', '#fdbe72']*7], font_size=14,height=32
             ))])
 
-            table1.update_layout(margin=dict(l=10,r=10,b=10,t=10),height=328)
-            st.write(table1)
+           table1.update_layout(margin=dict(l=10,r=10,b=10,t=10),height=328)
+           st.write(table1)
         
-            table2=go.Figure(data=[go.Table(columnwidth=[1,2,1,1,1,1],header=dict(values=['<b>DATES</b>','<b>WEATHER CONDITION</b>','<b>WIND SPEED</b>','<b>PRESSURE<br>(in hPa)</b>','<b>SUNRISE<br>(in UTC)</b>','<b>SUNSET<br>(in UTC)</b>']
+           table2=go.Figure(data=[go.Table(columnwidth=[1,2,1,1,1,1],header=dict(values=['<b>DATES</b>','<b>WEATHER CONDITION</b>','<b>WIND SPEED</b>','<b>PRESSURE<br>(in hPa)</b>','<b>SUNRISE<br>(in UTC)</b>','<b>SUNSET<br>(in UTC)</b>']
                   ,line_color='black', fill_color='royalblue',  font=dict(color='white', size=14),height=36),
         cells=dict(values=[dates,desc,wspeed,pres,sunrise,sunset],
         line_color='black',fill_color=['paleturquoise',['palegreen', '#fdbe72']*7], font_size=14,height=36))])
         
-            table2.update_layout(margin=dict(l=10,r=10,b=10,t=10),height=360)
-            st.write(table2)
+           table2.update_layout(margin=dict(l=10,r=10,b=10,t=10),height=360)
+           st.write(table2)
          
     
     
