@@ -52,6 +52,18 @@ st.markdown('''<style>.stSpinner > div > div {border-top-color: #9d03fc;}</style
 st.markdown('''<style>.css-15tx938{min-height: 0.0rem;}</style>''',
     unsafe_allow_html=True)
 
+st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background: url("https://wallpaperaccess.com/full/1442216.jpg")
+    }
+  
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Design hide top header line
 hide_decoration_bar_style = '''<style>header {visibility: hidden;}</style>'''
 st.markdown(hide_decoration_bar_style, unsafe_allow_html=True)
