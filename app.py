@@ -135,6 +135,13 @@ else:
     wind_unit=" m/s"
     
   
+
+if(st.sidebar.button("Go!")):
+    st.write("Done!")
+    
+    
+    
+    
 st.write("\n")  # add spacing  
 
 st.sidebar.markdown(
@@ -161,5 +168,3 @@ st.sidebar.markdown(
     """)
 
   
-if(st.sidebar.button("Go!")):
-    st.write("Done!")
