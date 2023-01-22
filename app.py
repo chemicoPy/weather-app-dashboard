@@ -36,16 +36,6 @@ from countryinfo import CountryInfo
 # Desiging & implementing changes to the standard streamlit UI/UX
 st.set_page_config(page_icon="img/page_icon.png")    #Logo
 
-st.markdown(
-   f”””
-   <style>
-   p {
-   background-image: url("https://github.com/chemicoPy/weather-app-dashboard/blob/main/img/bg_img.jpg");
-   }
-   </style>
-   ”””,
-   unsafe_allow_html=True)
-
 st.markdown('''<style>.css-1egvi7u {margin-top: -4rem;}</style>''',
     unsafe_allow_html=True)
 # Design change hyperlink href link color
@@ -80,6 +70,21 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 st.title('Weather App dashboard')
 st.subheader("Navigate to side bar to see full project info as well as options to choose from, to get started!")
 
+def add_bg_from_url():
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background-image: url("https://github.com/chemicoPy/weather-app-dashboard/blob/main/img/bg_img.jpg");
+             background-attachment: fixed;
+             background-size: cover
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+
+add_bg_from_url() 
 
 def add_logo(logo_path, width, height):
     """Read and return a resized logo"""
