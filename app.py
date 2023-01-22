@@ -219,10 +219,10 @@ if country_select !="Country":
               #sunset.append( datetime.datetime.utcfromtimestamp(item["sunset"]).strftime('%H:%M'))
 
             #d1=datetime.date.fromtimestamp(item["dt"])
-            #dates.append(d1.strftime('%d %b'))
+            dates.append(item["dt"])
          
-            #sunrise.append( datetime.datetime.utcfromtimestamp(item["sunrise"]).strftime('%H:%M'))
-            #sunset.append( datetime.datetime.utcfromtimestamp(item["sunset"]).strftime('%H:%M'))
+            sunrise.append(item["sunrise"])
+            sunset.append(item["sunset"])
         
             
           
