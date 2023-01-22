@@ -134,7 +134,7 @@ if speed=="Kilometre/hour":
 else:
     wind_unit=" m/s"
     
-url=f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api}"
+url=f"https://api.openweathermap.org/data/2.5/weather?q={city_select}&appid={api}"
 response=requests.get(url)
 x=response.json()  
 
