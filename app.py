@@ -278,6 +278,3 @@ if(st.button("Go!")):
         table2.update_layout(margin=dict(l=10,r=10,b=10,t=10),height=360)
         st.write(table2)
         
-
-
-   
