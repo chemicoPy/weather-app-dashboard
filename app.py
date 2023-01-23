@@ -122,12 +122,12 @@ country_select = st.sidebar.selectbox(
 if country_select !="Country":
     states = CountryInfo(country_select)
     states_list = states.provinces()
-    states_list.insert(0, "State")
+    states_list.insert(0, "State/Province")
     state_select = st.sidebar.selectbox(
             "State",
             (states_list),)
     
-    if state_select !="State":
+    if state_select !="State/Province":
       city = geo_plug.all_State_CityNames(state_select)
       cities = []
       for key,values in eval(city)[0].items():
