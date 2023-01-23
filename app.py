@@ -259,7 +259,7 @@ if country_select !="Country":
           with col2:
              st.image(f"http://openweathermap.org/img/wn/{icon}@2x.png",width=70)
           
-          col1, col2, col3= st.columns(3)
+          col1, col2, col3= st.columns(2)
           col1.metric("TEMPERATURE",temp+temp_unit)
           col2.metric("WEATHER",current_weather)
           col2.metric("UVI", all_uvi[0])
