@@ -252,7 +252,8 @@ if country_select !="Country":
               temp=str(round(x["main"]["temp"]-cel,2))
           else:
               temp=str(round((((x["main"]["temp"]-cel)*1.8)+32),2))
-          
+              
+          st.image(f"http://openweathermap.org/img/wn/{icon}@2x.png",width=70)
           placeholder = st.empty()
           
           with placeholder.container():
