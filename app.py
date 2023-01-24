@@ -312,11 +312,9 @@ st.sidebar.markdown(
 
     """
     -----------
-    # Other Apps
+    # Other App(s)
  
     1. [Crypto Converter Dashboard](https://chemicopy-crypto-conv-dashboard-app-10tiqj.streamlit.app/)
-    2. [Immigration Dashboard](https://www.movavi.com/support/how-to/how-to-convert-music-to-wav.html)
-    3. [Crime Dashboard](https://www.movavi.com/support/how-to/how-to-convert-music-to-wav.html)
     """)
     
     
