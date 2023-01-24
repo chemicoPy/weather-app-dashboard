@@ -253,7 +253,7 @@ if country_select !="Country":
           else:
               temp=str(round((((x["main"]["temp"]-cel)*1.8)+32),2))
               
-          st.image(f"http://openweathermap.org/img/wn/{icon}@2x.png",width=70)
+          icon_it = st.image(f"http://openweathermap.org/img/wn/{icon}@2x.png",width=70)
           placeholder = st.empty()
           
           with placeholder.container():
@@ -263,7 +263,7 @@ if country_select !="Country":
                          value=temp+temp_unit)
               
               col2.metric(label="WEATHER",
-                         value=current_weather)
+                         value=current_weather+icon_it)
               
               col3.metric(label="UVI",
                          value=all_uvi[0])
