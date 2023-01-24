@@ -99,7 +99,7 @@ def add_logo(logo_path, width, height):
 my_logo = add_logo(logo_path="img/icon.png", width=60, height=70)
 st.sidebar.image(my_logo)
 
-api="9b833c0ea6426b70902aa7a4b1da285c"
+api=st.secrets["api_key"]
 BASE_URL = "http://api.openweathermap.org/data/2.5/forecast"
   
   
