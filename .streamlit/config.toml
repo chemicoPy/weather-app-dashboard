@@ -12,7 +12,7 @@ primaryColor = '#7792E3' # custom purple
 # backgroundColor = "rgba(254,248,239,1)"
 
 # Used as the background for most widgets (sidebar, text input etc.)
-secondaryBackgroundColor =  '#B9F1C0'"
+secondaryBackgroundColor =  "#B9F1C0"
 
 # Font color for the page.
 # textColor = "#0072c6"
