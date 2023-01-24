@@ -235,14 +235,14 @@ if country_select !="Country":
                 go.Bar(name="Maximum",x=dates,y=maxtemp,marker_color='crimson'),
                 go.Bar(name="Minimum",x=dates,y=mintemp,marker_color='navy')
                 ])
-              fig.update_layout(xaxis_title="Dates",yaxis_title="Temperature",barmode='group',margin=dict(l=70, r=10, t=80, b=80),font=dict(color="white"))
+              fig.update_layout(title="Graph of Temperture per Dates", xaxis_title="Dates",yaxis_title="Temperature",barmode='group',margin=dict(l=70, r=10, t=80, b=80),font=dict(color="white"))
               st.plotly_chart(fig)
         
           def linegraph():
               fig = go.Figure()
               fig.add_trace(go.Scatter(x=dates, y=mintemp, name='Minimum '))
               fig.add_trace(go.Scatter(x=dates, y=maxtemp, name='Maximimum ',marker_color='crimson'))
-              fig.update_layout(xaxis_title="Dates",yaxis_title="Temperature",font=dict(color="white"))
+              fig.update_layout(xtitle="Graph of Temperture per Dates", axis_title="Dates",yaxis_title="Temperature",font=dict(color="white"))
               st.plotly_chart(fig)
             
           icon=x["weather"][0]["icon"]
@@ -294,7 +294,7 @@ if country_select !="Country":
           st.write(table1)
         
           table2=go.Figure(data=[go.Table(columnwidth=[1,2,1,1,1,1],header=dict(values=['<b>DATES</b>','<b>WEATHER CONDITION</b>','<b>WIND SPEED</b>','<b>PRESSURE<br>(in hPa)</b>','<b>SUNRISE<br>(in UTC)</b>','<b>SUNSET<br>(in UTC)</b>', '<b>UVI<br>(UV Index)</b>']
-                  ,line_color='white', fill_color='royalblue',  font=dict(color='black', size=14),height=36),
+                  ,line_color='black', fill_color='royalblue',  font=dict(color='black', size=14),height=36),
         cells=dict(values=[dates,desc,wspeed,pres,sunrise,sunset, all_uvi],
         line_color='black',fill_color=['paleturquoise',['palegreen', '#fdbe72']*7], font_size=14,height=36))])
         
