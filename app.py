@@ -242,7 +242,7 @@ if country_select !="Country":
               fig = go.Figure()
               fig.add_trace(go.Scatter(x=dates, y=mintemp, name='Minimum '))
               fig.add_trace(go.Scatter(x=dates, y=maxtemp, name='Maximimum ',marker_color='crimson'))
-              fig.update_layout(axis_title="Dates",yaxis_title="Temperature",font=dict(color="white"))
+              fig.update_layout(xaxis="Dates",yaxis="Temperature",font=dict(color="white"))
               st.plotly_chart(fig)
             
           icon=x["weather"][0]["icon"]
