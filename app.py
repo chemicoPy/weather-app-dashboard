@@ -261,7 +261,7 @@ if country_select !="Country":
               col1.metric(label="Current Temperature ",
                          value=temp+temp_unit)
               col2.metric(label=" ",
-                         value=st.image(f"http://openweathermap.org/img/wn/{icon}@2x.png",width=70))
+                         value=f"http://openweathermap.org/img/wn/{icon}@2x.png")
               
               col2.metric(label="WEATHER",
                          value=current_weather)
