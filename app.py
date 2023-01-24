@@ -124,7 +124,7 @@ if country_select !="Country":
     states_list = states.provinces()
     states_list.insert(0, "State/Province")
     state_select = st.sidebar.selectbox(
-            "State",
+            "State/Province",
             (states_list),)
     
     if state_select !="State/Province":
