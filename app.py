@@ -256,17 +256,15 @@ if country_select !="Country":
           placeholder = st.empty()
           
           with placeholder.container():
-              col1, col2, col3, col4 = st.columns(4)
+              col1, col2, col3 = st.columns(3)
               
               col1.metric(label="Current Temperature ",
                          value=temp+temp_unit)
-              col2.metric(label=" ",
-                         value=f"http://openweathermap.org/img/wn/{icon}@2x.png")
               
               col2.metric(label="WEATHER",
                          value=current_weather)
               
-              col4.metric(label="UVI",
+              col3.metric(label="UVI",
                          value=all_uvi[0])
         
           st.subheader(" ")
