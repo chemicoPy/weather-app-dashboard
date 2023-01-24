@@ -254,12 +254,7 @@ if country_select !="Country":
               temp=str(round((((x["main"]["temp"]-cel)*1.8)+32),2))
           
           placeholder = st.empty()
-          
-          kpi1.metric(
-            label="Age ⏳",
-            value=round(avg_age),
-            delta=round(avg_age) - 10,
-        )
+
           with placeholder.container():
               col1, col2, col3 = st.columns(3)
               
