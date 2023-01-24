@@ -235,7 +235,7 @@ if country_select !="Country":
                 go.Bar(name="Maximum",x=dates,y=maxtemp,marker_color='crimson'),
                 go.Bar(name="Minimum",x=dates,y=mintemp,marker_color='navy')
                 ])
-              fig.update_layout(xaxis_title="Dates",yaxis_title="Temperature",barmode='group',margin=dict(l=70, r=10, t=80, b=80),font=dict(color="white"))
+              fig.update_layout(xaxis="Dates",yaxis="Temperature",barmode='group',margin=dict(l=70, r=10, t=80, b=80),font=dict(color="white"))
               st.plotly_chart(fig)
         
           def linegraph():
