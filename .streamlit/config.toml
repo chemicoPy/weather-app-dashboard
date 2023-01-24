@@ -13,10 +13,10 @@ primaryColor = '#7792E3' # custom purple
 #backgroundColor = '#273346'
 
 # Used as the background for most widgets (sidebar, text input etc.)
-secondaryBackgroundColor =  "#B9F1C0"
+#secondaryBackgroundColor =  "#B9F1C0"
 
 # Font color for the page.
 # textColor = "#0072c6"
 
 # Font family for the page. (One of "serif", "sans serif" or "mono")
-# font = "sans serif"
+font = "sans serif"
