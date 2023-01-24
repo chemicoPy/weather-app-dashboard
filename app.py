@@ -255,17 +255,22 @@ if country_select !="Country":
           
           placeholder = st.empty()
           
+          kpi1.metric(
+            label="Age ⏳",
+            value=round(avg_age),
+            delta=round(avg_age) - 10,
+        )
           with placeholder.container():
               col1, col2, col3 = st.columns(3)
-              with col1:
-                  st.write("## Current Temperature ")
-              with col2:
-                 st.image(f"http://openweathermap.org/img/wn/{icon}@2x.png",width=70)
-          
-              col1, col2, col3= st.columns(3)
-              col1.metric("TEMPERATURE",temp+temp_unit)
-              col2.metric("WEATHER",current_weather)
-              col2.metric("UVI", all_uvi[0])
+              
+              col1.metric(label="## Current Temperature ",
+                         value=temp+temp_unit)
+              col2.metric(label="WEATHER",
+                         value=current_weather)
+              
+              col3.metric(label="UVI",
+                         value=all_uvi[0])
+        
           st.subheader(" ")
         
           if graph=="Bar Graph":
