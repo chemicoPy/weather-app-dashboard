@@ -10,7 +10,7 @@ primaryColor = '#7792E3' # custom purple
 
 
 # Background color for the main container.
-backgroundColor = '#273346'
+#backgroundColor = '#273346'
 
 # Used as the background for most widgets (sidebar, text input etc.)
 secondaryBackgroundColor =  "#B9F1C0"
