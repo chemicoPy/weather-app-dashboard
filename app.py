@@ -252,17 +252,20 @@ if country_select !="Country":
               temp=str(round(x["main"]["temp"]-cel,2))
           else:
               temp=str(round((((x["main"]["temp"]-cel)*1.8)+32),2))
-        
-          col1, col2, col3 = st.columns(3)
-          with col1:
-              st.write("## Current Temperature ")
-          with col2:
-             st.image(f"http://openweathermap.org/img/wn/{icon}@2x.png",width=70)
           
-          col1, col2, col3= st.columns(3)
-          col1.metric("TEMPERATURE",temp+temp_unit)
-          col2.metric("WEATHER",current_weather)
-          col2.metric("UVI", all_uvi[0])
+          placeholder = st.empty()
+          
+          with placeholder.container():
+              col1, col2, col3 = st.columns(3)
+              with col1:
+                  st.write("## Current Temperature ")
+              with col2:
+                 st.image(f"http://openweathermap.org/img/wn/{icon}@2x.png",width=70)
+          
+              col1, col2, col3= st.columns(3)
+              col1.metric("TEMPERATURE",temp+temp_unit)
+              col2.metric("WEATHER",current_weather)
+              col2.metric("UVI", all_uvi[0])
           st.subheader(" ")
         
           if graph=="Bar Graph":
