@@ -35,7 +35,7 @@ import datetime
   
 
 # Desiging & implementing changes to the standard streamlit UI/UX
-st.set_page_config(page_icon="img/page_icon.png", initial_sidebar_state='expanded')    #Logo
+st.set_page_config(page_icon="img/page_icon.png", layout='wide', initial_sidebar_state='expanded') 
 
 st.title("Weather App Dashboard 🌧️🌥️")
 
