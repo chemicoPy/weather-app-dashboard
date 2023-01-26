@@ -282,7 +282,7 @@ st.sidebar.markdown(
     -----------
     # Other App(s)
  
-    1. [Crypto Converter Dashboard](https://chemicopy-crypto-conv-dashboard-app-10tiqj.streamlit.app/)
+    1. [Crypto Converter Dashboard](https://crypto-converter.streamlit.app/)
     """)
     
     
