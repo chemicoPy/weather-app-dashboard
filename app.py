@@ -271,7 +271,10 @@ if country_select !="Country":
           table2.update_layout(margin=dict(l=10,r=10,b=10,t=10),height=360)
           st.write(table2)
  
-           
+st.sidebar.markdown("## App Demo")   
+demo = st.sidebar.checkbox('App Demo')
+if demo == 1:
+    st.sidebar.video('https://res.cloudinary.com/victorogunjobi/video/upload/v1675912385/Weather%20App%20Dashboard/app_demo_tkw7wi.mp4', format='mp4')          
     
     
 st.write("\n")  # add spacing  
