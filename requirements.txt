@@ -7,7 +7,7 @@ countryinfo
 geosky
 idna==3.3
 lxml==3.4.2
-libxml2==2.9.2
+libxml2
 libxslt==1.1.28
 requests==2.27.1
 urllib3==1.26.9
